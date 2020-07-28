@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../css/simple_search.css" />
+<script src="../javascript/menu.js"></script>
+<link rel="icon" type="image/png" href="../graphics/logo.png""/>
+<title>Simple Search</title>
+</head>
+
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="home.html">Home Page</a>
+  <a href="simple_search.html">Simple Search</a>
+  <a href="map_search.html">Map Search</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+
+<p class="aligncenter">
+    <img src="../graphics/logo.png" alt="centered image" />
+</p>      
+
+<p class="aligncenter" style="font-size:25px;color:#2B3856" alt="centered image">
+    Advanced Search For Clinical Trials Worldwide
+</p>      
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
+
+<h1 class="aligncenter">Simple Search: List of All the Results</h1>
+
+<div class="main-block">
+      <form id="simple_form">
+          <fieldset style="width:1000px">
+            <legend>Disease</legend>            
+            <label>Disease Name:<input type="text" name="disease"></label>            
+          </fieldset>
+          <fieldset>
+            <legend>Drug</legend>            
+            <label>Drug Name:<input type="text" name="drug"></label>            
+          </fieldset>
+          <fieldset>
+             <legend>Clinical Trial Date (Optional)</legend>  
+             <label>Date clinical trials started:<input type="date" name="date">
+          </fieldset>
+          <div class="aligncenter">
+            <br>
+            <input type="submit" value="Search" >
+            <input type="reset" value="Reset" >
+          </div>  
+      </form>
+      
+</div>
+
+
+</script>  
+</body>
+</html> 
