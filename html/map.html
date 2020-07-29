@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../css/map.css" />
+<link rel="icon" type="image/png" href="../graphics/logo.png""/>
+<title>Map Search</title>
+<script src="../javascript/menu.js"></script>
+<script src="../javascript/map.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?AIzaSyC02_PWZ1r58L2BvytY06YNYatw6eNdlcQ&callback=initMap"
+      defer
+    ></script>
+
+</head>
+
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="home.html">Home Page</a>
+  <a href="simple_search.html">Simple Search</a>
+  <a href="map_search.html">Map Search</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+
+<p class="aligncenter">
+    <img src="../graphics/logo.png" alt="centered image" />
+</p>      
+
+<p class="aligncenter" style="font-size:25px;color:#2B3856" alt="centered image">
+    Advanced Search For Clinical Trials Worldwide
+</p>      
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
+
+<div id="map" ></div>
+
+
+
+</body>
+</html> 
