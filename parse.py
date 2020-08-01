@@ -20,7 +20,7 @@ db = sql.connect(
 )
 
 cursor = db.cursor()
-cursor.execute("DROP DATABASE HealthMap")
+
 cursor.execute("CREATE DATABASE IF NOT EXISTS HealthMap")
 
 db = sql.connect(
@@ -32,7 +32,7 @@ db = sql.connect(
 
 cursor = db.cursor()
 
-cursor.execute("CREATE TABLE ClinicalTrials (id VARCHAR(255), drugs VARCHAR(10000),disease VARCHAR(10000),countries VARCHAR(10000),date VARCHAR(255),PRIMARY KEY (id))")
+cursor.execute("CREATE TABLE ClinicalTrials (id VARCHAR(255), drugs VARCHAR(1000),disease VARCHAR(1000),countries VARCHAR(255),date VARCHAR(255))")
 db.commit()
 
 directory=sys.argv[1]
@@ -67,13 +67,13 @@ for roots,dirs,files in os.walk(directory):
 				for desc in description.iter('mesh_term'):
 					disease.append(desc.text)
 
+			for coun in countries:
+				query = "INSERT INTO ClinicalTrials (id, drugs,disease,countries,date) VALUES (%s, %s,%s,%s,%s)"
 
-			query = "INSERT INTO ClinicalTrials (id, drugs,disease,countries,date) VALUES (%s, %s,%s,%s,%s)"
-
-			values = (id1,listToString(drug),listToString(disease),listToString(countries),date)
-			print(id1)
-			try:
-				cursor.execute(query, values)
-				db.commit()
-			except:
-				pass
+				values = (id1,listToString(drug),listToString(disease),coun,date)
+				print(id1)
+				try:
+					cursor.execute(query, values)
+					db.commit()
+				except:
+					pass

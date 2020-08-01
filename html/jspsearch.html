@@ -2,10 +2,10 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="../css/map_search.css" />
-<link rel="icon" type="image/png" href="../graphics/logo.png""/>
+<link rel="stylesheet" type="text/css" href="../css/jspsearch.css" />
 <script src="../javascript/menu.js"></script>
-<title>Map Search</title>
+<link rel="icon" type="image/png" href="../graphics/logo.png""/>
+<title>Clinical Trials Search</title>
 </head>
 
 <body>
@@ -28,25 +28,17 @@
 </p>      
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
 
-<h1 class="aligncenter">Map Search: Graphical Presentation of the Results</h1>
+<h1 class="aligncenter">Search For Clinical Trials</h1>
 
 <div class="main-block">
-      <form id="map_form" action="map.php" method="post" >
+      <form action="search.jsp" method="post" >
           <fieldset style="width:1000px">
             <legend>Disease</legend>            
             <label>Disease Name:<input type="text" name="disease" required></label>            
           </fieldset>
-          <fieldset>
-            <legend>Drug</legend>            
-            <label>Drug Name:<input type="text" name="drug" required></label>            
-          </fieldset>
-          <fieldset>
-             <legend>Clinical Trial Date (Optional)</legend>  
-             <label>Date clinical trials started:<input type="date" name="date">
-          </fieldset>
           <div class="aligncenter">
             <br>
-            <input type="submit" value="Search"  >
+            <input type="submit" value="Search" >
             <input type="reset" value="Reset" >
           </div>  
       </form>
@@ -54,5 +46,6 @@
 </div>
 
 
+</script>  
 </body>
 </html> 

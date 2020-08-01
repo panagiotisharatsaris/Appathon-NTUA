@@ -33,6 +33,42 @@
 </p>      
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
 
+<?php
+
+$disease=$_POST["disease"];
+$drug=$_POST["drug"];
+$date=$_POST["date"];
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "HealthMap";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password,$dbname);
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT C.countries AS country,COUNT(C.id) AS count FROM ClinicalTrials AS C WHERE C.drugs LIKE '%".$drug."%'  AND C.disease LIKE '%".$disease."%' GROUP BY C.countries ORDER BY COUNT(C.id) DESC";
+$res=array();
+if($result = mysqli_query($conn, $sql)){
+    if(mysqli_num_rows($result) > 0){
+  
+        while($row = mysqli_fetch_array($result)){
+		 array_push($res,$row['country'],$row['count']);
+        }
+        mysqli_free_result($result);
+    } else{
+        
+    }
+} else{
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
+}
+
+?> 
+<script>var result = [<?php echo '"'.implode('","',  $res ).'"' ?>];</script>
 <div id="myMap" style="position:relative;width:600px;height:400px;"></div>
 
 

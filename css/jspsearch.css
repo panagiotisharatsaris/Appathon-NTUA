@@ -3,13 +3,7 @@ body {
   background-image: url("../graphics/back.jpg");
   background-size: cover;
 }
-html {
-  scroll-behavior: smooth;
-}
 
-div {
-  overflow: auto;
-}
 .sidenav {
   height: 100%;
   width: 0;
@@ -21,7 +15,6 @@ div {
   overflow-x: hidden;
   transition: 1s;
   padding-top: 60px;
-  overflow: auto;
 }
 
 .sidenav a {
@@ -96,37 +89,4 @@ input[type="reset"] {
 }
 input[type="reset"]:hover {
   background-color: #2B3856;
-}
-
-table {
-  border-collapse: collapse;
-}
-
-table, th, td {
-  border: 1px solid black;
-}
-
-table {
-  width: 60%;
-}
-
-th {
-  height: 50px;
-}
-
-
-td {
-  height: 30px;
-  vertical-align: center;
-}
-
-th {
-  background-color: #2B3856;
-  color: white;
-}
-
-td 
-{
-    text-align: center; 
-    vertical-align: middle;
 }
