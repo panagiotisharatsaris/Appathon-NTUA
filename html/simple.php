@@ -42,10 +42,12 @@ $sql = "SELECT C.countries AS country,COUNT(C.id) AS count FROM ClinicalTrials A
 
 if($result = mysqli_query($conn, $sql)){
     if(mysqli_num_rows($result) > 0){
+      echo '<div id="table-wrapper">';
+      echo '<div id="table-scroll">';
         echo "<table>";
             echo "<tr>";
                 echo "<th>Country</th>";
-                echo "<th>Count</th>";
+                echo "<th>Number of Clinical Trials</th>";
             echo "</tr>";
         while($row = mysqli_fetch_array($result)){
             echo "<tr>";
@@ -54,6 +56,8 @@ if($result = mysqli_query($conn, $sql)){
             echo "</tr>";
         }
         echo "</table>";
+        echo "</div>";
+        echo "</div>";
         // Free result set
         mysqli_free_result($result);
     } else{
@@ -70,6 +74,6 @@ if($result = mysqli_query($conn, $sql)){
 </div>
 
 
-</script>  
+
 </body>
 </html> 
