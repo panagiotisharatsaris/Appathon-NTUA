@@ -15,6 +15,7 @@
   <a href="home.html">Home Page</a>
   <a href="simple_search.html">Simple Search</a>
   <a href="map_search.html">Map Search</a>
+  <a href="jspsearch.html">Clinical Trials Search</a>
   <a href="contact.html">Contact</a>
 </div>
 
@@ -37,8 +38,11 @@ $conn = new mysqli($servername, $username, $password,$dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-
-$sql = "SELECT C.countries AS country,COUNT(C.id) AS count FROM ClinicalTrials AS C WHERE C.drugs LIKE '%".$drug."%'  AND C.disease LIKE '%".$disease."%' GROUP BY C.countries ORDER BY COUNT(C.id) DESC";
+if ($date!=''){
+$sql = "SELECT C.countries AS country,COUNT(C.id) AS count FROM ClinicalTrials AS C WHERE C.drugs LIKE '%".$drug."%'  AND C.disease LIKE '%".$disease."%' AND CAST(RIGHT(C.date,4) AS SIGNED)>=".$date." GROUP BY C.countries ORDER BY COUNT(C.id) DESC";}
+else{
+$sql = "SELECT C.countries AS country,COUNT(C.id) AS count FROM ClinicalTrials AS C WHERE C.drugs LIKE '%".$drug."%'  AND C.disease LIKE '%".$disease."%'  GROUP BY C.countries ORDER BY COUNT(C.id) DESC";
+}
 
 if($result = mysqli_query($conn, $sql)){
     if(mysqli_num_rows($result) > 0){
