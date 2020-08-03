@@ -9,7 +9,7 @@ function sleep(milliseconds) {
 
 
 function GetMap() {
-  map = new Microsoft.Maps.Map('#myMap');
+  var map = new Microsoft.Maps.Map('#myMap');
   map.setView({
       mapTypeId: Microsoft.Maps.MapTypeId.road,
       center: new Microsoft.Maps.Location(0, 0),
@@ -17,13 +17,12 @@ function GetMap() {
   });
 
   var i;
-  var pinLayer = new Microsoft.Maps.EntityCollection();
   for (i=0;i<result.length;i=i+2){
 	var location = result[i];
         var count=result[i+1];
         sleep(1000)
 	var request = new XMLHttpRequest()
-        //	request.open('GET', 'http://dev.virtualearth.net/REST/v1/Locations?maxResults=1&key=AgvK9x-Z_OlQKTFUyyZXUNl7e0zIK2eYjLNF4ZUa4p4eV8rsu7h_C4Kds6jpu4fB&countryRegion='+location, true)
+
 	request.open('GET', 'https://nominatim.openstreetmap.org/search?format=json&q=' + location, true)
 	request.onload = function () {
 	  var data = JSON.parse(this.response)
@@ -35,4 +34,6 @@ function GetMap() {
 	request.send();
 }
 }
+
+
 

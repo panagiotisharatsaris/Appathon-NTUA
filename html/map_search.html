@@ -1,58 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="../css/map_search.css" />
-<link rel="icon" type="image/png" href="../graphics/logo.png""/>
-<script src="../javascript/menu.js"></script>
-<title>Map Search</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=greek"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/map_search.css" />
+	<link rel="icon" type="image/png" href="../graphics/logo.png""/>
+	<script src="../javascript/menu.js"></script>
+	<title>Map Search</title>
 </head>
 
 <body>
 
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="home.html">Home Page</a>
-  <a href="simple_search.html">Simple Search</a>
-  <a href="map_search.html">Map Search</a>
-  <a href="jspsearch.html">Clinical Trials Search</a>
-  <a href="contact.html">Contact</a>
-</div>
+	<div id="mySidenav" class="sidenav">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <a href="home.html">Home Page</a>
+	  <a href="simple_search.html">Simple Search</a>
+	  <a href="map_search.html">Map Search</a>
+	  <a href="jspsearch.html">Clinical Trials Search</a>
+	  <a href="contact.html">Contact</a>
+	</div>
 
 
-<p class="aligncenter">
-    <img src="../graphics/logo.png" alt="centered image" />
-</p>      
+	<p class="aligncenter">
+	    <img src="../graphics/logo.png" alt="centered image" />
+	</p>      
 
-<p class="aligncenter" style="font-size:25px;color:#2B3856" alt="centered image">
-    Advanced Search For Clinical Trials Worldwide
-</p>      
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
+	<p class="aligncenter" style="font-size:25px;color:#2B3856" alt="centered image">
+	    Advanced Search For Clinical Trials Worldwide
+	</p>      
+	<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
 
-<h1 class="aligncenter">Map Search: Graphical Presentation of the Results</h1>
+	<h1 class="aligncenter">Map Search: Graphical Presentation of the Results</h1>
 
-<div class="main-block">
-      <form id="map_form" action="map.php" method="post" >
-          <fieldset style="width:1000px">
-            <legend>Disease</legend>            
-            <label>Disease Name:<input type="text" name="disease" required></label>            
-          </fieldset>
-          <fieldset>
-            <legend>Drug</legend>            
-            <label>Drug Name:<input type="text" name="drug" required></label>            
-          </fieldset>
-          <fieldset>
-             <legend>Clinical Trial Year (Optional)</legend>  
-             <label>Clinical trials started after Year:<input type="number" min="1800" max="2021" step="1" name="date">
-          </fieldset>
-          <div class="aligncenter">
-            <br>
-            <input type="submit" value="Search"  >
-            <input type="reset" value="Reset" >
-          </div>  
-      </form>
-      
-</div>
+	<div class="main-block">
+	      <form id="map_form" action="map.php" method="post" >
+		  <fieldset style="width:1000px">
+		    <legend>Disease</legend>            
+		    <label>Disease Name:<input type="text" name="disease" required></label>            
+		  </fieldset>
+		  <fieldset>
+		    <legend>Drug</legend>            
+		    <label>Drug Name:<input type="text" name="drug" required></label>            
+		  </fieldset>
+		  <fieldset>
+		     <legend>Clinical Trial Year (Optional)</legend>  
+		     <label>Clinical trials started after Year:<input type="number" min="1800" max="2021" step="1" name="date">
+		  </fieldset>
+		  <div class="aligncenter">
+		    <br>
+		    <input type="submit" value="Search"  >
+		    <input type="reset" value="Reset" >
+		  </div>  
+	      </form>
+	      
+	</div>
 
 
 </body>

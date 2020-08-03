@@ -1,52 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="../css/jspsearch.css" />
-<script src="../javascript/menu.js"></script>
-<link rel="icon" type="image/png" href="../graphics/logo.png""/>
-<title>Clinical Trials Search</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=greek"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/jspsearch.css" />
+	<script src="../javascript/menu.js"></script>
+	<link rel="icon" type="image/png" href="../graphics/logo.png""/>
+	<title>Clinical Trials Search</title>
 </head>
 
 <body>
 
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="home.html">Home Page</a>
-  <a href="simple_search.html">Simple Search</a>
-  <a href="map_search.html">Map Search</a>
-  <a href="jspsearch.html">Clinical Trials Search</a>
-  <a href="contact.html">Contact</a>
-</div>
+	<div id="mySidenav" class="sidenav">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <a href="home.html">Home Page</a>
+	  <a href="simple_search.html">Simple Search</a>
+	  <a href="map_search.html">Map Search</a>
+	  <a href="jspsearch.html">Clinical Trials Search</a>
+	  <a href="contact.html">Contact</a>
+	</div>
 
 
-<p class="aligncenter">
-    <img src="../graphics/logo.png" alt="centered image" />
-</p>      
+	<p class="aligncenter">
+	    <img src="../graphics/logo.png" alt="centered image" />
+	</p>      
 
-<p class="aligncenter" style="font-size:25px;color:#2B3856" alt="centered image">
-    Advanced Search For Clinical Trials Worldwide
-</p>      
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
+	<p class="aligncenter" style="font-size:25px;color:#2B3856" alt="centered image">
+	    Advanced Search For Clinical Trials Worldwide
+	</p>      
+	<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
 
-<h1 class="aligncenter">Search For Clinical Trials</h1>
+	<h1 class="aligncenter">Search For Clinical Trials</h1>
 
-<div class="main-block">
-      <form action="http://localhost:8080/jsp/search.jsp" method="post" >
-          <fieldset style="width:1000px">
-            <legend>Disease</legend>            
-            <label>Disease Name:<input type="text" name="disease" required></label>            
-          </fieldset>
-          <div class="aligncenter">
-            <br>
-            <input type="submit" value="Search" >
-            <input type="reset" value="Reset" >
-          </div>  
-      </form>
-      
-</div>
+	<div class="main-block">
+	      <form action="http://localhost:8080/jsp/search.jsp" method="post" >
+		  <fieldset style="width:1000px">
+		    <legend>Disease</legend>            
+		    <label>Disease Name:<input type="text" name="disease" required></label>            
+		  </fieldset>
+		  <div class="aligncenter">
+		    <br>
+		    <input type="submit" value="Search" >
+		    <input type="reset" value="Reset" >
+		  </div>  
+	      </form>
+	      
+	</div>
 
-
-</script>  
 </body>
 </html> 

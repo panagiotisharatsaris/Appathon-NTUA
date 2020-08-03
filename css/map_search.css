@@ -48,15 +48,6 @@ body {
 }
 
 
-h1, h3 {
-font-weight: 400;
-}
-h1 {
-font-size: 32px;
-}
-h3 {
-color: #1c87c9;
-}
 .main-block, .info {
 display: flex;
 flex-direction: column;

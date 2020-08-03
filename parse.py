@@ -7,10 +7,7 @@ import os
 
 def listToString(s):  
     
-    # initialize an empty string 
-    str1 = "," 
-    
-    # return string   
+    str1 = ","  
     return (str1.join(s)) 
 
 db = sql.connect(
@@ -21,7 +18,7 @@ db = sql.connect(
 
 cursor = db.cursor()
 
-cursor.execute("CREATE DATABASE IF NOT EXISTS HealthMap")
+cursor.execute("CREATE DATABASE HealthMap")
 
 db = sql.connect(
     host = "localhost",
@@ -71,7 +68,6 @@ for roots,dirs,files in os.walk(directory):
 				query = "INSERT INTO ClinicalTrials (id, drugs,disease,countries,date) VALUES (%s, %s,%s,%s,%s)"
 
 				values = (id1,listToString(drug),listToString(disease),coun,date)
-				print(id1)
 				try:
 					cursor.execute(query, values)
 					db.commit()
